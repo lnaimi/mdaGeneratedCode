@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SmartTourismOntology (2).SharedKernel.Interfaces;
-using SmartTourismOntology (2).SharedKernel;
+using TourismApp.SharedKernel.Interfaces;
+using TourismApp.SharedKernel;
 
-namespace SmartTourismOntology (2).Core.Entities
+namespace TourismApp.Core.Entities
 {
 
-public class Location : A_Object A_Object
+public class Location : BaseEntity
 	{
 	
 		public  Name { get; set;}
@@ -18,15 +18,6 @@ public class Location : A_Object A_Object
 		public double Latitude { get; set;}
 		public String WebSite { get; set;}
 		public  Adress { get; set;}
-	
-		public Action? Action { get; set;}
-	
-    private Dictionary<Guid, Transport> lsTransport = new Dictionary<Guid, Transport>();
-		public Dictionary<Guid, Transport> ListTransport
-        	{
-            		get { return lsTransport; }
-            		set { lsTransport = value; }
-        	}
 	
 
 	

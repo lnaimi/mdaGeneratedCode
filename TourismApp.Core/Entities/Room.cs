@@ -3,13 +3,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SmartTourismOntology (2).SharedKernel.Interfaces;
-using SmartTourismOntology (2).SharedKernel;
+using TourismApp.SharedKernel.Interfaces;
+using TourismApp.SharedKernel;
 
-namespace SmartTourismOntology (2).Core.Entities
+namespace TourismApp.Core.Entities
 {
 
-public class Room
+public class Room : BaseEntity, IAggregateRoot
 	{
 	
 		public String Id { get; set;}
@@ -20,20 +20,6 @@ public class Room
 		public boolean Wifi { get; set;}
 		public boolean AirConditioner { get; set;}
 		public Common Classes App.Pricing Price { get; set;}
-	
-    private Dictionary<Guid, Amenity> lsAmenity = new Dictionary<Guid, Amenity>();
-		public Dictionary<Guid, Amenity> ListAmenity
-        	{
-            		get { return lsAmenity; }
-            		set { lsAmenity = value; }
-        	}
-	
-    private Dictionary<Guid, Bed> lsBed = new Dictionary<Guid, Bed>();
-		public Dictionary<Guid, Bed> ListBed
-        	{
-            		get { return lsBed; }
-            		set { lsBed = value; }
-        	}
 	
 
 	

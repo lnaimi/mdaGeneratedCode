@@ -3,18 +3,16 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SmartTourismOntology (2).SharedKernel.Interfaces;
-using SmartTourismOntology (2).SharedKernel;
+using TourismApp.SharedKernel.Interfaces;
+using TourismApp.SharedKernel;
 
-namespace SmartTourismOntology (2).Core.Entities
+namespace TourismApp.Core.Entities
 {
 
-public class Answer : Action
+public class Answer : BaseEntity
 	{
 	
 		public  Text { get; set;}
-	
-		public Question Question { get; set;}
 	
 
 	

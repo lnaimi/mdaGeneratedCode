@@ -3,21 +3,19 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SmartTourismOntology (2).SharedKernel.Interfaces;
-using SmartTourismOntology (2).SharedKernel;
+using TourismApp.SharedKernel.Interfaces;
+using TourismApp.SharedKernel;
 
-namespace SmartTourismOntology (2).Core.Entities
+namespace TourismApp.Core.Entities
 {
 
-public class Action
+      []
+    
+public class Action : BaseEntity, , IAggregateRoot
 	{
 	
 		public String Id { get; set;}
 		public DateTime Date { get; set;}
-	
-		public Account Account { get; set;}
-	
-		public A_Object? A_Object { get; set;}
 	
 
 	

@@ -3,13 +3,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SmartTourismOntology (2).SharedKernel.Interfaces;
-using SmartTourismOntology (2).SharedKernel;
+using TourismApp.SharedKernel.Interfaces;
+using TourismApp.SharedKernel;
 
-namespace SmartTourismOntology (2).Core.Entities
+namespace TourismApp.Core.Entities
 {
 
-public class User
+      []
+    
+public class User : BaseEntity, , IAggregateRoot
 	{
 	
 		public String Id { get; set;}
@@ -19,34 +21,6 @@ public class User
 		public Date DateOfBirth { get; set;}
 		public String Phone { get; set;}
 		public  Gender { get; set;}
-	
-    private Dictionary<Guid, UserAbility> lsUserAbility = new Dictionary<Guid, UserAbility>();
-		public Dictionary<Guid, UserAbility> ListUserAbility
-        	{
-            		get { return lsUserAbility; }
-            		set { lsUserAbility = value; }
-        	}
-	
-    private Dictionary<Guid, UserInterest> lsUserInterest = new Dictionary<Guid, UserInterest>();
-		public Dictionary<Guid, UserInterest> ListUserInterest
-        	{
-            		get { return lsUserInterest; }
-            		set { lsUserInterest = value; }
-        	}
-	
-    private Dictionary<Guid, UserPaymentOption> lsUserPaymentOption = new Dictionary<Guid, UserPaymentOption>();
-		public Dictionary<Guid, UserPaymentOption> ListUserPaymentOption
-        	{
-            		get { return lsUserPaymentOption; }
-            		set { lsUserPaymentOption = value; }
-        	}
-	
-    private Dictionary<Guid, Language> lsLanguage = new Dictionary<Guid, Language>();
-		public Dictionary<Guid, Language> ListLanguage
-        	{
-            		get { return lsLanguage; }
-            		set { lsLanguage = value; }
-        	}
 	
 
 	
